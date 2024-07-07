@@ -204,7 +204,6 @@ function addListenerCategoryItems() {
     cloneNode(categorys);
     removeCategoryChildren();
     getProductsCategory(categoryName);
-    console.log(containerCategoryClone)
   });
 });
 }
@@ -283,7 +282,6 @@ async function requestLocation() {
       const response = await fetch('http://ip-api.com/json/');
       const data = await response.json();
 
-      console.log(data);
       btnRequestLocation.style.display = 'none';
       locationRef.textContent = `${data.city}, ${data.country}`;
     })
