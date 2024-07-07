@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/pizza.ico" type="image/x-icon">
     <title>Jar Jer</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -60,7 +61,8 @@
       </nav>
       
       <section class="header__action--mobile-inactive">
-        <img src="assets/svg/cart.svg" alt="Icon cart">
+        <span class="indicator"></span>
+        <img src="assets/svg/cart.svg" alt="Icon cart" id="icon-cart">
         <button type="button" class="header__action--account">Account</button>
       </section>
     </header>
@@ -79,45 +81,45 @@
           <div class="main__search--location--icon">
             <img src="assets/svg/location.svg" alt="icon location">
           <h2 class="main__search--location--title">My location</h2>
+          <button type="button" class="btn-request-location">Request</button>
           </div>
           <div class="main__search--location--text">
-            <p class="main__search--location--text--title">New York, <span class="main__search--location--text--title--span">left side blue door</span></p>
+            <p class="main__search--location--text--title--span"></p>
           </div>
         </article>
 
         <article class="main__search--search">
-          <form class="main__search--search--form">
-            <input type="text" placeholder="Search for food" class="main__search--search--input" />
+          <form class="main__search--search--form" id="form-search">
+            <input type="text" placeholder="Search for food" class="main__search--search--input" id="input-search" />
             <button type="submit" class="main__search--search--button">Search</button>
           </form>
+          <ul id="search-results"></ul>
         </article>
       </section>
 
       <section class="main__popular">
-        <h2 class="main__popular--title">Popular category</h2>
+        <h2 class="main__popular--title" >Popular category</h2>
+        <span id="back">&#8592; Go back</span>
+        
 
-        <article class="main__popular--categories">
-          <div class="main__popular--categories--item">
+        <article class="main__popular--categories categorys">
+          <div class="main__popular--categories--item" data-category="pizza">
             <img src="assets/svg/pizza.svg" alt="Icon pizza">
             <p>Pizza</p>
           </div>
-           <div class="main__popular--categories--item">
-            <img src="assets/svg/burger.svg" alt="Icon burger">
-            <p>Pizza</p>
-          </div>
-          <div class="main__popular--categories--item">
+          <div class="main__popular--categories--item" data-category="sandwich">
             <img src="assets/svg/sandwich.svg" alt="Icon sandwich">
             <p>sandwich</p>
           </div>
-          <div class="main__popular--categories--item">
+          <div class="main__popular--categories--item" data-category="chicken">
             <img src="assets/svg/chicken.svg" alt="Icon chicken">
             <p>chicken</p>
           </div>
-          <div class="main__popular--categories--item">
+          <div class="main__popular--categories--item" data-category="pasta">
             <img src="assets/svg/pasta.svg" alt="Icon pasta">
             <p>pasta</p>
           </div>
-          <div class="main__popular--categories--item">
+          <div class="main__popular--categories--item" data-category="dessert">
             <img src="assets/svg/desert.svg" alt="Icon dessert">
             <p>dessert</p>
           </div>
@@ -160,5 +162,7 @@
         <li><a href="#" class="footer__list--item">Terms</a></li>
       </ul>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
