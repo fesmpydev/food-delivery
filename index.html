@@ -4,52 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jar Jer</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <section>
-        <img src="assets/svg/logo.svg" alt="Logo" />
-        <h1>
-          <span>Jar Jer</span>
-          <span>Food Delivery</span>
+    <header class="header">
+      <section class="header__logo--container">
+        <img src="assets/svg/logo.svg" alt="Logo" class="header__logo" />
+        <h1 class="header__title">
+          <span class="header__title--first">Jar Jer</span>
+          <span class="header__title--second">Food Delivery</span>
         </h1>
       </div>
+      </section>
 
-      <nav>
-        <ul>
-          <li>
+      <nav class="nav__inactive">
+        <ul class="nav__list">
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/category.svg" alt="Icon category" />
-              <span>Categorys</span>
+              <span class="nav__list--item--link">Categorys</span>
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/phone.svg" alt="Icon category" />
-              <span>Contact Us</span>
+              <span class="nav__list--item--link">Contact Us</span>
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/facebook.svg" alt="Icon facebook" />
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/youtube.svg" alt="Icon youtube" />
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/twitter.svg" alt="Icon twitter" />
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/instagram.svg" alt="Icon instagram" />
             </a>
           </li>
-          <li>
+          <li class="nav__list--item">
             <a href="#">
               <img src="assets/svg/linkedin.svg" alt="Icon linkedin" />
             </a>
@@ -57,88 +59,93 @@
         </ul>
       </nav>
       
-      <section>
+      <section class="header__action--mobile-inactive">
         <img src="assets/svg/cart.svg" alt="Icon cart">
-        <button type="button">Account</button>
+        <button type="button" class="header__action--account">Account</button>
       </section>
     </header>
 
-    <main>
+    <main class="main">
 
-      <section>
-        <img src="assets/img/cover-burger-mobile.png" alt="Cover burger">
+      <section class="main__cover">
+        <img src="assets/img/cover-burger-mobile.png" alt="Cover burger" 
+        srcset="assets/img/cover-burger-mobile.png 400w, assets/img/cover-burger-desktop.png 1024w"
+        sizes="(max-width: 1023px),1024px"
+        class="main__cover--mobile">
       </section>
 
-      <section>
-        <article>
-          <div>
+      <section class="main__search">
+        <article class="main__search--location">
+          <div class="main__search--location--icon">
             <img src="assets/svg/location.svg" alt="icon location">
-          <h2>My location</h2>
+          <h2 class="main__search--location--title">My location</h2>
           </div>
-          <div>
-            <p>New York, <span>left side blue door</span></p>
+          <div class="main__search--location--text">
+            <p class="main__search--location--text--title">New York, <span class="main__search--location--text--title--span">left side blue door</span></p>
           </div>
         </article>
 
-        <article>
-          <form>
-            <input type="text" placeholder="Search for food" />
-            <button type="submit">Search</button>
+        <article class="main__search--search">
+          <form class="main__search--search--form">
+            <input type="text" placeholder="Search for food" class="main__search--search--input" />
+            <button type="submit" class="main__search--search--button">Search</button>
           </form>
         </article>
       </section>
 
-      <section>
-        <h2>Popular category</h2>
+      <section class="main__popular">
+        <h2 class="main__popular--title">Popular category</h2>
 
-        <article>
-          <div>
+        <article class="main__popular--categories">
+          <div class="main__popular--categories--item">
             <img src="assets/svg/pizza.svg" alt="Icon pizza">
             <p>Pizza</p>
           </div>
-           <div>
+           <div class="main__popular--categories--item">
             <img src="assets/svg/burger.svg" alt="Icon burger">
             <p>Pizza</p>
           </div>
-          <div>
+          <div class="main__popular--categories--item">
             <img src="assets/svg/sandwich.svg" alt="Icon sandwich">
             <p>sandwich</p>
           </div>
-          <div>
+          <div class="main__popular--categories--item">
             <img src="assets/svg/chicken.svg" alt="Icon chicken">
             <p>chicken</p>
           </div>
-          <div>
+          <div class="main__popular--categories--item">
             <img src="assets/svg/pasta.svg" alt="Icon pasta">
             <p>pasta</p>
           </div>
-          <div>
+          <div class="main__popular--categories--item">
             <img src="assets/svg/desert.svg" alt="Icon dessert">
             <p>dessert</p>
           </div>
         </article>
       </section>
 
-      <section>
-        <h2>Recently Pre orders</h2>
+      <section class="main__orders">
+        <h2 class="main__orders--title">Recently Pre orders</h2>
 
-        <article>
-          <div>
-            <img src="assets/img/burger.png" alt="Icon burger">
-            <div>
+        <article class="main__orders--items">
+          <div class="main__orders--items--item">
+            <img src="assets/img/burger.png" alt="Icon burger" class="main__orders--items--item--image">
+            <div class="main__orders--items--item--card">
               <img src="assets/img/burger-king.png" alt="">
-              <div>
-                <p>Kink Burger</p>
-                <span>Rate 8/10</span>
+              <div class="main__orders--items--item--card--text">
+                <p class="main__orders--items--item--card--text--title">Kink Burger</p>
+                <span class="main__orders--items--item--card--text--rate">Rate 8/10</span>
               </div>
             </div>
-            <div>
-            <img src="assets/img/burger.png" alt="Icon burger">
-            <div>
+          </div>
+          
+          <div class="main__orders--items--item">
+            <img src="assets/img/burger.png" alt="Icon burger" class="main__orders--items--item--image">
+          <div class="main__orders--items--item--card">
               <img src="assets/img/burger-king.png" alt="">
-              <div>
-                <p>Kink Burger</p>
-                <span>Rate 8/10</span>
+              <div class="main__orders--items--item--card--text">
+                <p class="main__orders--items--item--card--text--title">Kink Burger</p>
+                <span class="main__orders--items--item--card--text--rate">Rate 8/10</span>
               </div>
             </div>
           </div>
@@ -146,12 +153,11 @@
       </section>
     </main>
 
-    <footer>
-      <p>© 2020 Jar Jer. All rights reserved.</p>
-      <ul>
-        <li><a href="#">Applications</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
+    <footer class="footer">
+      <ul class="footer__list">
+        <li><a href="#" class="footer__list--item">Applications</a></li>
+        <li><a href="#" class="footer__list--item">Privacy</a></li>
+        <li><a href="#" class="footer__list--item">Terms</a></li>
       </ul>
     </footer>
   </body>
